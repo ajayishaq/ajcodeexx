@@ -952,7 +952,7 @@
         <div class="contact-wrap">
             <p class="section-label" style="text-align:center;">Contact</p>
             <h2 class="section-title" style="text-align:center;">Let's build<br>something together.</h2>
-            <a href="/cdn-cgi/l/email-protection#c0a8a5acacaf80a1aaa8b5a2eea4a5b6" class="contact-email"><span class="__cf_email__" data-cfemail="4f272a2323200f2e25273a2d612b2a39">[email&#160;protected]</span></a>
+            <a href="#" class="contact-email" id="contact-email">hello@ajhub.dev</a>
             <div class="socials">
                 <a href="https://x.com/ishaqabubakar_" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter/X">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -1034,6 +1034,12 @@
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 60);
         });
+
+        // Fix email link
+        const emailEl = document.getElementById('contact-email');
+        const e = 'hello' + '@' + 'ajhub.dev';
+        emailEl.href = 'mailto:' + e;
+        emailEl.textContent = e;
 
         // Scroll-triggered reveal
         const observer = new IntersectionObserver((entries) => {
